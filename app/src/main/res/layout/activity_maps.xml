@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:id="@+id/dlugosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Długość:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/szerokosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Szerokość:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dlugosc" />
+
+    <TextView
+        android:id="@+id/kurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kurs:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/szerokosc" />
+
+    <TextView
+        android:id="@+id/predkosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prędkość:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kurs" />
+
+    <TextView
+        android:id="@+id/wysokosc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wysokość:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/predkosc" />
+
+    <TextView
+        android:id="@+id/iloscsat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ilość satelit:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wysokosc" />
+
+    <TextView
+        android:id="@+id/hdop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HDOP:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iloscsat" />
+
+    <TextView
+        android:id="@+id/vdop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VDOP:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hdop" />
+
+    <TextView
+        android:id="@+id/dl_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/sz_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dl_val" />
+
+    <TextView
+        android:id="@+id/ku_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sz_val" />
+
+    <TextView
+        android:id="@+id/pr_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ku_val" />
+
+    <TextView
+        android:id="@+id/wy_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pr_val" />
+
+    <TextView
+        android:id="@+id/il_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wy_val" />
+
+    <TextView
+        android:id="@+id/hd_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/il_val" />
+
+    <TextView
+        android:id="@+id/vd_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hd_val" />
+
+    <Button
+        android:id="@+id/calc_val"
+        android:layout_width="129dp"
+        android:layout_height="62dp"
+        android:text="Oblicz odległość"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
